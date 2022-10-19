@@ -15,7 +15,8 @@ let getHomePage = (req, res) => {
                 })
             })
             // console.log(JSON.stringify(data)); // results contains rows returned by server
-            return res.render('index.ejs', { dataUsers: JSON.stringify(data) })
+            console.log(data)
+            return res.render('index.ejs', { dataUsers: data })
 
         }
     );
