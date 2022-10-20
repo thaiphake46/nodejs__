@@ -65,3 +65,39 @@ body {
     text-decoration: none;
     color: #000;
 }
+
+
+#create-data-user {
+    width: 500px;
+    margin: 20px auto;
+}
+
+#create-data-user h3 {
+    text-align: center;
+}
+
+#create-data-user .form-group {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#create-data-user .form-group label {
+    min-width: 100px;
+    font-size: 15px;
+    padding: 4px;
+}
+
+#create-data-user .form-group input {
+    flex: 1;
+    padding: 4px;
+    font-size: 15px;
+}
+
+#create-data-user button {
+    padding: 6px;
+    font-size: 15px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}

@@ -10,12 +10,39 @@
 </head>
 
 <body>
+    <!-- top nav -->
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </div>
+
+    <!-- from input data user -->
+    <div id="create-data-user">
+        <h3>Create new user</h3>
+        <form action="/create-data-user" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input required type="text" name="firstName" id="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input required type="text" name="lastName" id="lastName">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input required type="text" name="address" id="address">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- table data users -->
     <div class="data-user">
         <h2>List User</h2>
         <table id="customers">
@@ -48,6 +75,7 @@
                     <% } %>
             </tbody>
         </table>
+
     </div>
 </body>
 

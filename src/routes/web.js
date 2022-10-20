@@ -6,10 +6,7 @@ let router = express.Router()
 const initWebRoute = (app) => {
     router.get('/', homeControllers.getHomePage)
     router.get('/detail/user/:id', homeControllers.getDetailPage)
-
-    router.get('/about', (req, res) => {
-        res.send('I\'m Huy Thai')
-    })
+    router.post('/create-data-user', homeControllers.createNewUser)
 
     return app.use('/', router)
 }
