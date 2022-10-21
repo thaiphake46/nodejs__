@@ -42,7 +42,7 @@ let updateUserPage = async (req, res) => {
     return res.render('update.ejs', { dataUsers: rows[0] })
 }
 
-let postUpdateUser = async (req, res) => {
+let postUpdateUser = async (req, res) => { // update user to database
     let { firstName, lastName, email, address, id } = req.body
     await pool.execute(
         `UPDATE users

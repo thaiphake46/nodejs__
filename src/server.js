@@ -1,6 +1,7 @@
 import express from "express"
 import configViewEngine from "./config/viewEngine"
 import initWebRoute from './routes/web'
+import initAPIRoute from './routes/api'
 // import connection from './config/connectDB'
 require('dotenv').config()
 
@@ -12,6 +13,7 @@ app.use(express.json())
 
 configViewEngine(app)
 initWebRoute(app)
+initAPIRoute(app)
 
 
 
