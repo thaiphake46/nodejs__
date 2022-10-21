@@ -66,34 +66,45 @@ body {
     color: #000;
 }
 
+#customers td form {
+    display: inline-block;
+}
 
+
+/* form */
+#update-data-user,
 #create-data-user {
     width: 500px;
     margin: 20px auto;
 }
 
+#update-data-user h3,
 #create-data-user h3 {
     text-align: center;
 }
 
+#update-data-user .form-group,
 #create-data-user .form-group {
     width: 100%;
     display: flex;
     margin-bottom: 10px;
 }
 
+#update-data-user .form-group label,
 #create-data-user .form-group label {
     min-width: 100px;
     font-size: 15px;
     padding: 4px;
 }
 
+#update-data-user .form-group input,
 #create-data-user .form-group input {
     flex: 1;
     padding: 4px;
     font-size: 15px;
 }
 
+#update-data-user button,
 #create-data-user button {
     padding: 6px;
     font-size: 15px;

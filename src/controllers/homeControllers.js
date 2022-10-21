@@ -3,7 +3,6 @@ import pool from '../config/connectDB'
 let getHomePage = async (req, res) => {
     const [rows, fields] = await pool.execute('SELECT * FROM `users`');
     return res.render('index.ejs', { dataUsers: rows })
-    console.log('>>> check rows: ', rows)
 
 }
 
@@ -24,8 +23,41 @@ let createNewUser = async (req, res) => {
     return res.redirect('/')
 }
 
+let deleteUser = async (req, res) => {
+    let userId = req.body.userId
+    await pool.execute(
+        'DELETE FROM users WHERE id = ?;',
+        [userId]
+    )
+    return res.redirect('/')
+}
+
+let updateUserPage = async (req, res) => {
+    let userId = req.params.id
+    const [rows, fields] = await pool.execute(
+        'SELECT * FROM `users` where id = ?',
+        [userId]
+    );
+    // console.log(rows)
+    return res.render('update.ejs', { dataUsers: rows[0] })
+}
+
+let postUpdateUser = async (req, res) => {
+    let { firstName, lastName, email, address, id } = req.body
+    await pool.execute(
+        `UPDATE users
+        SET firstName = ?, lastName = ?, email = ?, address = ?
+        WHERE id = ?;`,
+        [firstName, lastName, email, address, id]
+    )
+    return res.redirect('/')
+}
+
 module.exports = {
     getHomePage,
     getDetailPage,
-    createNewUser
+    createNewUser,
+    deleteUser,
+    updateUserPage,
+    postUpdateUser
 }
