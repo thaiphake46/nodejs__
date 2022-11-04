@@ -1,13 +1,14 @@
 
 // get the client
-// const mysql = require('mysql2');
+
 import mysql from 'mysql2/promise'
+require('dotenv').config()
 
 // create the connection to database
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    database: 'nodejsbasic'
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    database: process.env.DATABASE
 });
 
 // const connection = await mysql.createConnection({ host: 'localhost', user: 'root', database: 'nodejsbasic' });

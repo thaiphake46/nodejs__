@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 500px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form .btn-submit {
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin-top: 6px;
+    background-color: #ccc;
+    font-size: 18px;
+    justify-items: left;
+    cursor: pointer;
+}
+
+form .btn a {
+    margin-left: 6px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form .form_gr {
+    margin-top: 8px;
+}
+
+.form_gr label {
+    display: block;
+    width: 100%;
+}
+
+.form_gr label,
+.form_gr input {
+    font-size: 18px;
+}
+
+.form_gr input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.form_gr input:focus {
+    border: 1px solid #000;
+}
+
+.form_gr.active input {
+    border-color: red;
+}
+
+.form_gr.active .form_message {
+    color: red;
+    margin-top: 6px;
+    padding: 2px;
+    width: 100%;
+}
